@@ -1,0 +1,1 @@
+select name, trunc(bytes/1024/1024) mb ,RESIZEABLE from  v$sgainfo;

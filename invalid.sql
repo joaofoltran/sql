@@ -1,0 +1,23 @@
+set linesize 300
+set pagesize 1000
+column owner format a17
+column object_name format a30
+column created format a20
+column last_ddl_time format a20
+column status for a7
+
+SELECT 
+	owner,
+	object_name,
+	object_type,
+	created,
+	last_ddl_time,
+	timestamp,
+	status
+FROM 
+	dba_invalid_objects
+WHERE
+	owner not in ('SYSMAN')
+ORDER BY 
+	timestamp, last_ddl_time
+;

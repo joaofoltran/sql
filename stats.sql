@@ -1,0 +1,1 @@
+execute DBMS_STATS.GATHER_TABLE_STATS (ownname => 'MSAF', tabname => 'X2002_PLANO_CONTAS', estimate_percent => dbms_stats.auto_sample_size, method_opt => 'FOR ALL COLUMNS SIZE AUTO', granularity => 'ALL', cascade => true);

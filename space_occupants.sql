@@ -1,0 +1,3 @@
+select round(SPACE_USAGE_KBYTES/1024) MB, OCCUPANT_NAME
+from V$SYSAUX_OCCUPANTS
+order by  1 desc;
