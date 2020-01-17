@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 set lines 20000
 col OPNAME format a22
 col target format a40
@@ -19,23 +18,3 @@ Round(sofar / totalwork * 100, 2) "%_COMPLETE",
 substr(username,1,20) username
 from gv$session_longops
 where (sofar <> totalwork) and (totalwork <> 0) order by TIME_REMAINING ;
-=======
-col opname for a40
-col username for a20
-SELECT 	opname, 
-		username, 
-		inst_id, 
-		sid, 
-		serial#, 
-		sql_id, 
-		sofar, 
-		totalwork, 
-		Round(sofar / totalwork * 100, 2) "%_COMPLETE", 
-		start_time 
-FROM   	gv$session_longops 
-WHERE 
-  --OPNAME NOT LIKE '%aggregate%' 
-	totalwork != 0 
-	AND sofar <> totalwork 
-ORDER  BY "%_COMPLETE"; 
->>>>>>> new 2020
