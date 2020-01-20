@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 -- Puxa plano do SQL_ID através do AWR
 
 PROMPT '========================================================================'
@@ -17,12 +16,3 @@ SELECT * FROM table(DBMS_XPLAN.DISPLAY_AWR('ag1garw05bmb8'));
 
 undef SQL_ID
 set verify on
-=======
-set linesize 400
-set verify off
-set pagesize 1000
-
-select * from table(dbms_xplan.display_cursor('&1',&2,'allstats last'));
-
-set verify on
->>>>>>> new 2020
