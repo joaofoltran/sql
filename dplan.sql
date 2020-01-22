@@ -10,7 +10,7 @@ set pagesize 1000
 
 ACCEPT sql_id   PROMPT 'SQL_ID...: '
 
-select * from table(dbms_xplan.display_cursor('ag1garw05bmb8',0,'ADAPTIVE'));
+SELECT * FROM TABLE(dbms_xplan.display_cursor('&1',&2,'ALLSTATS LAST  +PEEKED_BINDS +PREDICATE +COST +BYTES'));
 
 SELECT * FROM table(DBMS_XPLAN.DISPLAY_AWR('ag1garw05bmb8'));
 
