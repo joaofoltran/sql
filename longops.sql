@@ -1,9 +1,9 @@
 set lines 20000
-col OPNAME format a22
-col target format a40
+col OPNAME format a30
+col target format a25
 col "PROGRESS BAR" format a35
 col "TIME TO GO" format 99990.0
-col username format a22
+col username format a20
 
 select sid,
 substr(opname,1,20) opname,
