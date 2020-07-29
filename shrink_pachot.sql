@@ -18,12 +18,12 @@ from hwmts right join dba_data_files using(tablespace_name,relative_fno)
 select
 case when autoextensible='YES' and maxbytes>=bytes
 then -- we generate resize statements only if autoextensible can grow back to current size
-'/* reclaim '||to_char(ceil((bytes-hwm_bytes)/1024/1024),999999)
-||'M from '||to_char(ceil(bytes/1024/1024),999999)||'M */ '
+'/* reclaim '||to_char(ceil((bytes-hwm_bytes)/1024/1024),9999999)
+||'M from '||to_char(ceil(bytes/1024/1024),9999999)||'M */ '
 ||'alter database datafile '''||file_name||''' resize '||ceil(hwm_bytes/1024/1024)||'M;'
 else -- generate only a comment when autoextensible is off
-'/* reclaim '||to_char(ceil((bytes-hwm_bytes)/1024/1024),999999)
-||'M from '||to_char(ceil(bytes/1024/1024),999999)
+'/* reclaim '||to_char(ceil((bytes-hwm_bytes)/1024/1024),9999999)
+||'M from '||to_char(ceil(bytes/1024/1024),9999999)
 ||'M after setting autoextensible maxsize higher than current size for file '
 || file_name||' */'
 end SQL
