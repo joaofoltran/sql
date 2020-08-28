@@ -1,0 +1,9 @@
+select 
+    table_name,
+    index_name,
+    column_name,
+    column_position
+from
+    dba_ind_columns
+where
+    table_name='&1'

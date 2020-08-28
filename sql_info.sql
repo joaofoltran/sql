@@ -17,6 +17,6 @@ WHERE stat.sql_id            =txt.sql_id
 AND stat.snap_id             =snap.snap_id
 AND snap.begin_interval_time>=sysdate-15
 --AND lower(sql_text) LIKE '%select cmoder.codcmoder%'
-AND lower(txt.sql_id) ='55cpb8xfxs229'
+AND lower(txt.sql_id) ='5zs0aawffdvb9'
 AND parsing_schema_name NOT IN ('SYS','SYSMAN','MDSYS','WKSYS')
 ORDER BY 4 ASC;

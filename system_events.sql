@@ -5,4 +5,4 @@
        average_wait,
        time_waited_micro
 FROM v$system_event
-ORDER BY event;
+ORDER BY time_waited;
