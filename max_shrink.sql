@@ -1,9 +1,9 @@
 -- Mostra possíveis diminuições dos datafiles para liberar espaço
 set verify off
 column file_name format a60 word_wrapped
-column smallest format 999,990 heading "Smallest|Size|Poss."
-column currsize format 999,990 heading "Current|Size"
-column savings  format 999,990 heading "Poss.|Savings"
+column smallest format 99999,990 heading "Smallest|Size|Poss."
+column currsize format 99999,990 heading "Current|Size"
+column savings  format 99999,990 heading "Poss.|Savings"
 set termout off
 break on report
 compute sum of savings on report

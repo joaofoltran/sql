@@ -1,1 +1,1 @@
-exec sys.utl_recomp.recomp_parallel(30);
+exec sys.utl_recomp.recomp_parallel(10);

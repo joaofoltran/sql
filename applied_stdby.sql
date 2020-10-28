@@ -1,4 +1,7 @@
-set feedback off
+set feedback off;
+set echo off;
+set trimspool on;
+set verify off;
 
 SELECT ARCH.THREAD# "Thread", 
        ARCH.SEQUENCE# "Last Sequence Received", 
@@ -32,3 +35,6 @@ WHERE  sequence# = (SELECT Max(sequence#)
 
 prompt
 set feedback on
+set echo on
+set trimspool off
+set verify on
